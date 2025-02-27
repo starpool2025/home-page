@@ -51,16 +51,14 @@
         .scrolling-text {
             display: inline-block;
             white-space: nowrap;
-            position: absolute;
-            left: 50%; /* Start from the center */
             animation: scroll 20s linear infinite; /* Changed from 10s to 20s */
         }
         @keyframes scroll {
             0% {
-                transform: translateX(-50%); /* Start at center */
+                transform: translateX(100%);
             }
             100% {
-                transform: translateX(100%); /* Scroll to the right */
+                transform: translateX(-100%);
             }
         }
     </style>
