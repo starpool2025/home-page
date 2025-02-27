@@ -38,6 +38,29 @@
             background-color: darkslategray;
             color: gold;
         }
+        /* Scrolling Banner Styles */
+        .scrolling-banner {
+            width: 100%;
+            overflow: hidden;
+            background-color: darkslategray;
+            color: gold;
+            font-size: 1.2em;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .scrolling-text {
+            display: inline-block;
+            white-space: nowrap;
+            animation: scroll 10s linear infinite;
+        }
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
     </style>
 </head>
 <body>
@@ -46,6 +69,12 @@
     </header>
     <div class="button-link">
         <a href="https://www.example.com" target="_blank">Visit Our Website</a>
+    </div>
+    <!-- Scrolling Banner -->
+    <div class="scrolling-banner">
+        <div class="scrolling-text">
+            Welcome to The Star Pool Team! We offer the best pool services around! Contact us today to get started.
+        </div>
     </div>
 </body>
 </html>
