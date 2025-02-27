@@ -18,10 +18,45 @@
             text-align: center;
             font-size: 0.75em; /* Reduce text size by 25% */
             padding-top: 20px; /* Adds space at the top */
+            flex-direction: column; /* Allows stacking of elements vertically */
+        }
+
+        /* Styling for the scrolling banner */
+        .scrolling-banner {
+            width: 100%;
+            overflow: hidden; /* Hides any overflow text */
+            margin-top: 20px; /* Adds space above the banner */
+            background-color: #003b5c; /* Darker blue for banner background */
+            padding: 10px 0; /* Adds padding around the text */
+            position: relative;
+        }
+
+        .scrolling-banner-text {
+            position: absolute;
+            white-space: nowrap; /* Prevents wrapping of text */
+            animation: scroll-left 15s linear infinite; /* Scrolls the text from left to right */
+            font-size: 1.2em; /* Adjusts font size */
+        }
+
+        /* Keyframes for the scrolling animation */
+        @keyframes scroll-left {
+            0% {
+                left: 100%; /* Starts from the right side of the screen */
+            }
+            100% {
+                left: -100%; /* Ends off the left side of the screen */
+            }
         }
     </style>
 </head>
 <body>
     <h1>Welcome to The Star Pool team web page.</h1>
+
+    <!-- Scrolling Banner -->
+    <div class="scrolling-banner">
+        <div class="scrolling-banner-text">
+            Latest updates: Join our team! Upcoming events and more exciting news are on the way!
+        </div>
+    </div>
 </body>
 </html>
